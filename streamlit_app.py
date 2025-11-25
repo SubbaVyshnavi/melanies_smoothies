@@ -1,8 +1,5 @@
 # Import python packages
-
-pip install streamlit 
 import streamlit as st
-#from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col,when_matched
 
 # Write directly to the app
@@ -15,7 +12,6 @@ st.write(
 
 title=st.text_input('Name of the title')
 st.write('The name of the title is: ',title)
-#from snowflake.snowpark.functions import col,when_matched
 cnx=st.connection("snowflake")
 session=cnx.session()
 

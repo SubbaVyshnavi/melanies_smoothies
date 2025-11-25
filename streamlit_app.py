@@ -15,7 +15,7 @@ st.write('The name of the title is: ',title)
 cnx=st.connection("snowflake")
 session=cnx.session()
 
-session=get_active_session()
+#session=get_active_session()
 my_data=session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col("fruit_name"))
 #st.dataframe(data=my_data)
 ing= st.multiselect("Choose upto 5 Fruits",my_data,max_selections=5)

@@ -34,7 +34,7 @@ if ing:
         search_on=st_pd.loc[st_pd['FRUIT_NAME'] == food, 'SEARCH_ON'].iloc[0]
         st.write('The search value for ', food,' is ', search_on, '.')
         st.subheader(food + " Nutrition Information")
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/{search_on}"+food)
+        smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}")
         st_df=st.dataframe(data=smoothiefroot_response.json())
 
 

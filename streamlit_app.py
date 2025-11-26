@@ -30,7 +30,8 @@ if ing:
     in_str=''
     for food in ing:
         in_str += food + ' '
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        st.subheader(food + "Nutrition Information")
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon"+food)
         st_df=st.dataframe(data=smoothiefroot_response.json())
 
 

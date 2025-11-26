@@ -42,3 +42,9 @@ if ing:
     if time_but:
         session.sql(ins_sta).collect()
         st.success("Your placed the Smoothie",icon="✅")
+
+
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
+

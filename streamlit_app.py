@@ -30,6 +30,9 @@ if ing:
     in_str=''
     for food in ing:
         in_str += food + ' '
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        st_df=st.dataframe(data=smoothiefroot_response.json())
+
 
     #st.write(in_str)
 
@@ -43,7 +46,4 @@ if ing:
         session.sql(ins_sta).collect()
         st.success("Your placed the Smoothie",icon="✅")
 
-
-    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    st_df=st.dataframe(data=smoothiefroot_response.json())
 
